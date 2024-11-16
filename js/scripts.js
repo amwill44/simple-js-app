@@ -7,12 +7,11 @@ let pokemonList = [
     { name: 'Pikachu', height: 40, unit: unit, type: ['electric']}
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    let pokemon = pokemonList[i];
+pokemonList.forEach(function(pokemon) {
     let output = pokemon.name + ' (height: ' + pokemon.height + unit + ')'; 
 
     if (pokemon.height > 65) {
         output += ' - Wow, that\'s big!';
     }
     document.write(output + '<br>');
-}
+}); 
