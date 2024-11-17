@@ -29,8 +29,10 @@ let pokemonRepository = (function () {
     };
 })();
 
+pokemonRepository.add({name: 'Mew', height: 40, unit: 'cm', type: ['psychic']});
+
 pokemonRepository.getAll().forEach(function(pokemon) {
-    let output = pokemon.name + ' (height: ' + pokemon.height + unit + ')'; 
+    let output = pokemon.name + ' (height: ' + pokemon.height + pokemon.unit + ')'; 
 
     if (pokemon.height > 65) {
         output += ' - Wow, that\'s big!';
@@ -38,4 +40,3 @@ pokemonRepository.getAll().forEach(function(pokemon) {
     document.write(output + '<br>');
 }); 
 
-pokemonRepository.add({name: 'Mew', height: 40, unit: 'cm', type ['psychic']});
