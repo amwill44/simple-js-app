@@ -81,7 +81,7 @@ table {
 
 .modal {
     position: relative;
-    width: 65%; 
+    width: 55%; 
     background: white;
     border-radius: 10px;
     padding: 20px;
@@ -106,4 +106,10 @@ table {
     border: none;
     font-size: 25px;
     cursor: pointer;
+}
+
+@media (min-width:720px) {
+	.modal {
+		width: 25%;
+	}
 }
