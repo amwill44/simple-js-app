@@ -5,18 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="robots" content="index, follow">
-	<meta name="author" content="Ashley Williams">
+    <meta name="author" content="Ashley Williams">
     <title>Simple JS App</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <!-- Custom Styles -->
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <ul class="pokemon-list"></ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pokédex</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Pokémon List -->
+    <div class="container mt-4">
+      <ul class="pokemon-list list-group"></ul>
+    </div>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pokemonModalLabel">Pokémon Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Content dynamically injected by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Polyfills -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.6.2/dist/fetch.umd.min.js"></script>
-    
+
+    <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
   </body>
 </html>
